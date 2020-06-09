@@ -1,8 +1,10 @@
 # `artifactory-shell-scripts`
 
-Show sosme artifactory download, upload, promote with shell scripts.
+[Artifactory REST API](https://www.jfrog.com/confluence/display/JFROG/Artifactory+REST+API) implement in shell
 
-More use can be refeered to https://github.com/jfrog/project-examples.git
+These shell also refer to other examples blow
+
+* https://github.com/jfrog/project-examples.git
 
 ## Usages
 
