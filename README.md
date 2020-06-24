@@ -2,21 +2,26 @@
 
 [Artifactory REST API](https://www.jfrog.com/confluence/display/JFROG/Artifactory+REST+API) implement in shell
 
-These shell also refer to other examples blow
+These shell also refer to other [examples](https://github.com/jfrog/project-examples.git)
 
-* https://github.com/jfrog/project-examples.git
+**When using these scripts, be sure to test adequately in your test environment to understand expectations. At one's own risk.**
 
-## Usages
+## Have implemented
 
-### `deploy-folder-by-checksum.sh`
+1. Deploy a local file to Artifactory keeping the same file name\
 
-#### Example 1
+    `$ deploy-file.sh localFilePath targetFolder`
+    
+2. Recursively deploys folder content. Attempt checksum deploy first to optimize upload time.
 
-1. Your artifactory repository named `generic-release-local`
-2. Your files saved in the directory that you are going to upload is should also named `generic-release-local`
-3. Then, run below command
-  ```bash
-  $ ls
-  generic-release-local
-  $ sh deploy-folder-by-checksum.sh generic-release-local
-  ```
+    `$ deploy-folder-by-checksum.sh localFileFolder targetRepoName`
+    
+3. Download a date range of files from Artifactory
+
+    `$ download-in-date-range.sh`
+    
+4. Cleanup a date range of files form Artifactory
+
+    `$ cleanup-artifacts.sh`
+    
+    TODO: cleanup empty folder.
